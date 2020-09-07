@@ -1,0 +1,121 @@
+.footer {
+    background: #49384a;
+    @include flexCenter();
+    flex-direction: column;
+    color: white;
+
+    .footer-cont {
+        padding-top: 40px;
+        max-width: 1200px;
+        margin-right: 40px;
+        width: 90%;
+        @include flexCenter(space-between, flex-start);
+        
+        @include phone{
+            flex-direction: column;
+        }
+
+        img {
+            margin: auto;
+            display: block;
+            width: 100px;
+            object-fit: contain;
+            @include phone{
+                margin: 10px auto 10px 10px;
+            }
+        }
+
+        .footer-menu {
+            width: 400px;
+            margin-right: 50px;
+            display: flex;
+            flex-direction: column;
+
+            h2 {
+                padding: 0 10px;
+            }
+
+            .items {
+                display: flex;
+                flex-wrap: wrap;
+
+                a {
+                    display: block;
+                    padding: 10px;
+                    color: white;
+                    transition: $short;
+
+                    &:hover {
+                        color: $secondary;
+                    }
+                }
+            }
+        }
+
+        .contact {
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            @include phone{
+                padding: 10px;
+            }
+
+            .item-cont {
+                display: flex;
+                @include phone{
+                    flex-direction: column;
+                }
+
+                .items {
+                    display: flex;
+                    flex-direction: column;
+                    margin-right: 50px;
+
+                    p {
+                        @include phone{
+                            margin: 5px 0;
+                        }
+                        a {
+                            color: white;
+                            transition: $short;
+
+                            &:hover {
+                                color: $secondary;
+                            }
+                        }
+                    }
+                }
+
+                items2 {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                p {
+                    a {
+                        color: white;
+                        transition: $short;
+
+                        &:hover {
+                            color: $secondary;
+                        }
+                    }
+                }
+            }
+
+            h2 {}
+        }
+    }
+    .credit{
+        padding-top: 30px;
+        p{
+            a{
+                color: black;
+                transition: $short;
+                &:hover{
+                    color: pink;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,84 @@
+@import './utils';
+
+.main-cont {
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    .pricing {
+        display: flex;
+        flex-direction: column;
+        flex: 2;
+        .price-box {
+            height: 70px;
+            transition: $short;
+            position: relative;
+            padding-top: 10px;
+
+            &:hover {
+                background: white;
+            }
+
+            &::after {
+                @include line();
+                background: $primary;
+                height: 3px;
+                bottom: 0;
+                left: 0;
+            }
+
+            .heading {
+                color: $dark;
+            }
+
+            .bonus-info {
+                font-weight: lighter;
+            }
+
+            .price {
+                position: absolute;
+                right: 0;
+                top: 7px;
+
+                &::after {
+                    content: ' eur';
+                    color: grey;
+                }
+            }
+        }
+        margin-right: 10px;
+    }
+    .img-cont{
+        background-image: url(../img/gallery/1.jpg);
+        background-position: center;
+        background-size: cover;
+        flex: 1;
+        margin: 5px;
+        @include phone{
+            display: none;
+        }
+    }
+    &.left{
+        flex-direction: row-reverse;
+        .pricing{
+            .price-box{
+                margin-right: 0;
+                margin-left: 10px;
+                @include phone{
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+    &.second{
+        .img-cont{
+        background-image: url(../img/gallery/2.jpg)
+        }
+    }
+    &.third{
+        .img-cont{
+        background-image: url(../img/gallery/3.jpg)
+        }
+    }
+}

@@ -1,0 +1,100 @@
+@import './utils';
+
+.main-cont{
+    position: relative;
+}
+
+.swiper-slide{
+    img{
+        width: 100%;
+        height: inherit;
+        object-fit: contain;
+    }
+}
+
+.slideshow{
+    $topBorderHeight : 20px;
+    $botBorderHeight : 20px;
+    width: 100%;
+    margin-top: $topBorderHeight + 25px;
+    min-height: 250px;
+    display: flex;
+    position: relative;
+    &::before{
+        top: -$topBorderHeight - 10px;
+        background: $primary;
+        height: $topBorderHeight;
+        @include line();
+    }
+    &::after{
+        bottom: -$botBorderHeight - 10px;
+        background: $primary;
+        height: $botBorderHeight;
+        @include line()
+    }
+}
+
+.services{
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    margin-bottom: 50px;
+    .service-cont{
+        width: 300px;
+        border-radius: 10px;
+        border: $primary 10px solid;
+        height: 350px;
+        @include flexCenter(center,flex-start);
+        margin: 10px;
+        img{
+            width: 100px;
+            object-fit: contain;
+            margin-top: 30px;
+        }
+        &:nth-child(1){
+            background-image: url('../img/feathers1.png');
+        }
+        &:nth-child(2){
+            background-image: url('../img/feathers2.png');
+        }
+        &:nth-child(3){
+            background-image: url('../img/feathers3.png');
+        }
+    }
+}
+
+.brands{
+    height: 125px;
+    background: $secondary;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::before{
+        @include line();
+        top: -10px;
+        height: 10px;
+        background: $primary;
+    }
+    img{
+        display: block;
+        object-fit: cover;
+        width: 100px;
+        padding: 0 30px;
+    }
+    
+}
+
+.swiper-container {
+    width: 100% !important;
+    height: 300px !important;
+}
+
+.swiper-button-next, .swiper-button-prev{
+    color: black !important;
+}
+.swiper-pagination-bullet-active{
+    background: black !important;
+}

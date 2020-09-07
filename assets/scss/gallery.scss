@@ -1,0 +1,122 @@
+@import './utils';
+
+h2{
+    margin-left: 5%;
+    padding-top: 40px;
+}
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 10;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.6);
+    @include flexCenter();
+
+    div {
+        position: relative;
+        height: 90%;
+        width: 90%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: contain;
+        }
+    }
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    .image-gallery {
+        margin-top: 20px;
+        width: 90%;
+        display: grid;
+        @include phone{
+            display: flex;
+            flex-direction: column;
+        }
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 10px;
+        &.one{
+        grid-template-areas:
+            'img-7 img-4 img-2 img-3'
+            'img-7 img-5 img-5 img-5'
+            'img-6 img-12 img-9 img-9'
+            'img-10 img-11 img-8 img-1'
+            'img-10 img-11 img-8 img-1';
+        }
+        
+        &.two{
+            grid-template-areas:
+                'img-13 img-13 img-14 img-14'
+                'img-19 img-19 img-17 img-18'
+                'img-16 img-16 img-15 img-15';
+        }
+        
+        &.three{
+            grid-template-areas:
+                'img-20 img-20 img-21 img-21'
+                'img-22 img-22 img-23 img-23'
+                'img-24 img-24 img-25 img-25'
+                'img-26 img-26 img-27 img-27'
+                'img-28 img-28 img-29 img-29'
+                'img-30 img-30 img-31 img-31';
+            padding-bottom: 30px;
+        }
+
+        div {
+            width: 100%;
+            cursor: pointer;
+            position: relative;
+            min-height: 25rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            @include flexCenter();
+            @include phone{
+                    background-position: top;
+            }
+
+            ion-icon {
+                font-size: 30px;
+                color: white;
+                opacity: 0;
+                padding: 15px;
+                border: 2px solid white;
+                border-radius: 15px;
+                transition: $long;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                background: black;
+                transition: $long;
+            }
+
+            &:hover:before {
+                opacity: 0.5;
+            }
+
+
+            &:hover > ion-icon {
+                opacity: 1;
+            }
+
+        }
+    }
+}

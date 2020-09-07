@@ -1,0 +1,36 @@
+@import './utils';
+@import './utils';
+
+
+.main-cont {
+    margin: 0 5%;
+    padding-bottom: 50px;
+
+    .intro-cont {
+        display: flex;
+        @include phone{
+            flex-direction: column;
+        }
+
+        .intro {
+            flex: 2;
+            padding-right: 40px;
+        }
+
+        .img-cont {
+            flex: 1;
+            border-radius: 10px;
+            background-image: url(../img/kadernictvo.jpg);
+            background-position: center;
+            background-size: cover;
+            @include phone{
+                min-height: 200px;
+                margin-top: 50px;
+            }
+
+        }
+        
+    }
+
+
+}

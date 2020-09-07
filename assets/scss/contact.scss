@@ -1,0 +1,91 @@
+@import './utils';
+
+ion-icon {
+    color: $primary;
+    font-size: 40px;
+}
+
+.contact {
+
+    .cont {
+        max-width: 1400px;
+        margin: 5%;
+        display: flex;
+        justify-content: center;
+        @include phone{
+            margin: 2% !important;
+        }
+        &.upper{@include phone{
+            flex-direction: column;
+            margin: 5% !important;
+            }}
+
+        form {
+            flex: 1;
+            @include phone{
+                
+            }
+            h2 {
+                font-size: 40px;
+            }
+
+            display: flex;
+            flex-direction: column;
+            min-width: 500px;
+
+            input {
+                display: block;
+            }
+            
+            textarea{
+                resize:none;
+                min-height: 200px;
+            }
+            
+            input,textarea{
+                font-size: 16px;
+                padding: 10px;
+                border-radius: 5px;
+                margin: 5px 0;
+                font-family: inherit;
+                width: 100%;
+                outline: none;
+                border: 1px solid grey;
+                background: #F5F5F5;
+                @include phone{
+                    width: 90%;
+                }
+            }
+            .submit{
+                color: white;
+                background: $primary;
+            }
+        }
+        
+        .info{
+            flex: 1;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            padding-top: 130px;
+            @include phone{
+                padding-top: 70px;
+            }
+            .cont{
+                align-items: center;
+                justify-content: flex-start;
+                margin: 0 0 10px 100px;
+                a,p{
+                    padding-left: 20px;
+                }
+            }
+        }
+
+    }
+    .map{
+        border: 0;
+        width: 100%;
+        margin-top: 80px;
+    }
+
+}

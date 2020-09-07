@@ -1,0 +1,224 @@
+nav {
+  position: sticky;
+  border-bottom: 2px solid #795D7A;
+  top: 0;
+  width: 100%;
+  min-height: 50px;
+  background: white;
+  z-index: 3;
+  left: 0; }
+  @media (max-width: 900px) {
+    nav {
+      position: fixed; } }
+  nav .menu-toggle {
+    font-size: 35px;
+    margin-top: 5px;
+    z-index: 10;
+    display: none;
+    position: absolute;
+    right: 15px; }
+  nav .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    nav .menu a {
+      display: block;
+      cursor: pointer;
+      padding: 20px;
+      color: black;
+      font-size: 15px;
+      transition: all 0.3s; }
+      nav .menu a:hover {
+        background: #E6E6E7; }
+  @media (max-width: 900px) {
+    nav .menu-toggle {
+      display: block; }
+    nav .menu {
+      background: white;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      left: -100%;
+      width: 100%;
+      height: 100vh;
+      transition: all 0.3s; }
+    nav .active {
+      left: 0; } }
+
+.header {
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .header img {
+    padding: 50px; }
+  @media (max-width: 900px) {
+    .header {
+      display: none; } }
+
+.footer {
+  background: #49384a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white; }
+  .footer .footer-cont {
+    padding-top: 40px;
+    max-width: 1200px;
+    margin-right: 40px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; }
+    @media (max-width: 900px) {
+      .footer .footer-cont {
+        flex-direction: column; } }
+    .footer .footer-cont img {
+      margin: auto;
+      display: block;
+      width: 100px;
+      object-fit: contain; }
+      @media (max-width: 900px) {
+        .footer .footer-cont img {
+          margin: 10px auto 10px 10px; } }
+    .footer .footer-cont .footer-menu {
+      width: 400px;
+      margin-right: 50px;
+      display: flex;
+      flex-direction: column; }
+      .footer .footer-cont .footer-menu h2 {
+        padding: 0 10px; }
+      .footer .footer-cont .footer-menu .items {
+        display: flex;
+        flex-wrap: wrap; }
+        .footer .footer-cont .footer-menu .items a {
+          display: block;
+          padding: 10px;
+          color: white;
+          transition: all 0.3s; }
+          .footer .footer-cont .footer-menu .items a:hover {
+            color: #E6E6E7; }
+    .footer .footer-cont .contact {
+      width: 500px;
+      display: flex;
+      flex-direction: column; }
+      @media (max-width: 900px) {
+        .footer .footer-cont .contact {
+          padding: 10px; } }
+      .footer .footer-cont .contact .item-cont {
+        display: flex; }
+        @media (max-width: 900px) {
+          .footer .footer-cont .contact .item-cont {
+            flex-direction: column; } }
+        .footer .footer-cont .contact .item-cont .items {
+          display: flex;
+          flex-direction: column;
+          margin-right: 50px; }
+          @media (max-width: 900px) {
+            .footer .footer-cont .contact .item-cont .items p {
+              margin: 5px 0; } }
+          .footer .footer-cont .contact .item-cont .items p a {
+            color: white;
+            transition: all 0.3s; }
+            .footer .footer-cont .contact .item-cont .items p a:hover {
+              color: #E6E6E7; }
+        .footer .footer-cont .contact .item-cont items2 {
+          display: flex;
+          flex-direction: column; }
+        .footer .footer-cont .contact .item-cont p a {
+          color: white;
+          transition: all 0.3s; }
+          .footer .footer-cont .contact .item-cont p a:hover {
+            color: #E6E6E7; }
+  .footer .credit {
+    padding-top: 30px; }
+    .footer .credit p a {
+      color: black;
+      transition: all 0.3s; }
+      .footer .credit p a:hover {
+        color: pink; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+html, body {
+  font-family: 'Alata', sans-serif;
+  margin: 0;
+  background: white;
+  position: relative; }
+
+body {
+  background-attachment: fixed;
+  overflow-x: hidden;
+  background-size: cover;
+  background-image: url(../img/bg2.jpg); }
+
+h1.heading {
+  font-size: 40px;
+  margin-left: 5%; }
+  @media (max-width: 900px) {
+    h1.heading {
+      padding-top: 15px;
+      margin-top: 50px; } }
+
+.main-cont {
+  width: 80%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex; }
+  .main-cont .pricing {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    margin-right: 10px; }
+    .main-cont .pricing .price-box {
+      height: 70px;
+      transition: all 0.3s;
+      position: relative;
+      padding-top: 10px; }
+      .main-cont .pricing .price-box:hover {
+        background: white; }
+      .main-cont .pricing .price-box::after {
+        width: 100%;
+        position: absolute;
+        content: '';
+        background: #795D7A;
+        height: 3px;
+        bottom: 0;
+        left: 0; }
+      .main-cont .pricing .price-box .heading {
+        color: #49384A; }
+      .main-cont .pricing .price-box .bonus-info {
+        font-weight: lighter; }
+      .main-cont .pricing .price-box .price {
+        position: absolute;
+        right: 0;
+        top: 7px; }
+        .main-cont .pricing .price-box .price::after {
+          content: ' eur';
+          color: grey; }
+  .main-cont .img-cont {
+    background-image: url(../img/gallery/1.jpg);
+    background-position: center;
+    background-size: cover;
+    flex: 1;
+    margin: 5px; }
+    @media (max-width: 900px) {
+      .main-cont .img-cont {
+        display: none; } }
+  .main-cont.left {
+    flex-direction: row-reverse; }
+    .main-cont.left .pricing .price-box {
+      margin-right: 0;
+      margin-left: 10px; }
+      @media (max-width: 900px) {
+        .main-cont.left .pricing .price-box {
+          margin-left: 0; } }
+  .main-cont.second .img-cont {
+    background-image: url(../img/gallery/2.jpg); }
+  .main-cont.third .img-cont {
+    background-image: url(../img/gallery/3.jpg); }

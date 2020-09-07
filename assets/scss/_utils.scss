@@ -1,0 +1,60 @@
+$primary : #795D7A;
+$secondary : #E6E6E7;
+$dark : #49384A;
+$short : all .3s;
+$long: all .5s;
+
+@mixin line{
+    width: 100%;
+    position: absolute;
+    content: '';
+}
+
+@mixin flexCenter($x : center, $y : center){
+    display: flex;
+    justify-content: $x;
+    align-items: $y;
+}
+
+@mixin phone {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+
+@import './menu';
+@import './footer';
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+html, body{
+    font-family: 'Alata', sans-serif;
+    margin: 0;
+    background: white;
+    position: relative;
+}
+
+body{
+    background-attachment: fixed;
+    overflow-x: hidden;
+    background-size: cover;
+    background-image: url(../img/bg2.jpg);
+}
+
+h1.heading{
+        font-size: 40px;
+        margin-left: 5%;
+    @include phone{
+    padding-top: 15px;
+    margin-top: 50px;
+    }
+    }

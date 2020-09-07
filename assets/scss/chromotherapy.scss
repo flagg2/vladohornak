@@ -1,0 +1,91 @@
+@import './utils';
+
+
+.main-cont {
+    margin: 0 5%;
+
+    .intro-cont {
+        display: flex;
+        @include phone{
+            flex-direction: column;
+        }
+
+        .intro {
+            flex: 2;
+            padding-right: 40px;
+        }
+
+        .img-cont {
+            @include phone{
+                min-height: 300px;
+                margin-top: 50px;
+            }
+            flex: 1;
+            border-radius: 10px;
+            background-image: url(../img/chromoterapia2.jpg);
+            background-position: center;
+            background-size: cover;
+
+        }
+    }
+
+    .colors {
+        padding-bottom: 50px;
+
+        .color-box-cont{
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-top: 10px;
+            .color-box{
+            margin: 10px;
+                margin-top: 7px;
+                margin-left: 0;
+            min-width: 10px;
+            min-height: 10px;
+            }
+            &:nth-child(1) {
+                .color-box{
+                background: #3bb2e2;
+                }
+            }
+             &:nth-child(2) {
+                .color-box{
+                background: #80B888;
+                }
+            }
+             &:nth-child(3) {
+                .color-box{
+                background: #C2000A;
+                }
+            }
+             &:nth-child(4) {
+                .color-box{
+                background: #F6F088;
+                }
+            }
+             &:nth-child(5) {
+                .color-box{
+                    background: white;
+                    border: 1px solid black;
+                    box-sizing: border-box;
+                }
+            }
+             &:nth-child(6) {
+                .color-box{
+                background: #BE5CCE;
+                }
+            }
+             &:nth-child(7) {
+                .color-box{
+                background: #F7B400;
+                }
+            }
+            
+
+        }
+        
+    }
+
+
+}
